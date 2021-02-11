@@ -219,7 +219,7 @@ public class HeatingSystemStatechart implements IStatemachine, ITimed {
 	
 	/* Entry action for state 'On'. */
 	private void entryAction_main_region_On() {
-		timerService.setTimer(this, 0, (10 * 1000), false);
+		timerService.setTimer(this, 0, (60 * 1000), false);
 	}
 	
 	/* Exit action for state 'On'. */

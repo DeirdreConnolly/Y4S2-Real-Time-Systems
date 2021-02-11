@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_K-D9cGxUEeurMdDW5hkI7Q" specification="// Use the event driven execution model.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'.&#xA;@EventDriven&#xD;&#xA;&#xD;&#xA;// Use @SuperSteps(yes) to enable&#xA;// super step semantics.&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#x9;// Define events and variables here. &#xA;&#x9;// Use CTRL + Space for content assist.&#xA;&#x9;in event operate&#xA;&#x9;&#xA;&#x9;in event timer&#xA;&#x9;&#xA;&#x9;in event timerOn&#xA;&#x9;&#xA;&#x9;in event timerOff&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;// if in On state for >60 seconds:&#xA;&#x9;// goTo OnTimer" name="HeatingSystemStatechart">
+  <sgraph:Statechart xmi:id="_K-D9cGxUEeurMdDW5hkI7Q" specification="// Use the event driven execution model.&#xA;// Switch to cycle based behavior&#xA;// by specifying '@CycleBased(200)'.&#xA;@EventDriven&#xD;&#xA;&#xD;&#xA;// Use @SuperSteps(yes) to enable&#xA;// super step semantics.&#xA;@SuperSteps(no)&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#x9;// Define events and variables here. &#xA;&#x9;// Use CTRL + Space for content assist.&#xA;&#x9;in event operate&#xA;&#x9;in event timer&#xA;&#x9;in event timerOn&#xA;&#x9;in event timerOff&#xA;&#x9;&#xA;&#x9;// if in On state for >60 seconds:&#xA;&#x9;// goTo OnTimer&#xA;&#x9;// after 60 s" name="HeatingSystemStatechart">
     <regions xmi:id="_K-Fyq2xUEeurMdDW5hkI7Q" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_K-FyrGxUEeurMdDW5hkI7Q">
         <outgoingTransitions xmi:id="_K-FyrWxUEeurMdDW5hkI7Q" target="_K-GZsGxUEeurMdDW5hkI7Q"/>
@@ -8,7 +8,7 @@
       <vertices xsi:type="sgraph:State" xmi:id="_K-GZsGxUEeurMdDW5hkI7Q" name="On" incomingTransitions="_K-FyrWxUEeurMdDW5hkI7Q _K-GZvWxUEeurMdDW5hkI7Q _G8tLYGxVEeurMdDW5hkI7Q">
         <outgoingTransitions xmi:id="_K-GZs2xUEeurMdDW5hkI7Q" specification="operate" target="_K-GZumxUEeurMdDW5hkI7Q"/>
         <outgoingTransitions xmi:id="_5Pd_UGxUEeurMdDW5hkI7Q" specification="timer" target="_upWVMGxUEeurMdDW5hkI7Q"/>
-        <outgoingTransitions xmi:id="_XUP6MGxYEeurMdDW5hkI7Q" specification="after 10 s" target="_upWVMGxUEeurMdDW5hkI7Q"/>
+        <outgoingTransitions xmi:id="_XUP6MGxYEeurMdDW5hkI7Q" specification="after 60 s" target="_upWVMGxUEeurMdDW5hkI7Q"/>
       </vertices>
       <vertices xsi:type="sgraph:State" xmi:id="_K-GZumxUEeurMdDW5hkI7Q" name="Off" incomingTransitions="_K-GZs2xUEeurMdDW5hkI7Q _0XvbYGxUEeurMdDW5hkI7Q">
         <outgoingTransitions xmi:id="_K-GZvWxUEeurMdDW5hkI7Q" specification="operate" target="_K-GZsGxUEeurMdDW5hkI7Q"/>
